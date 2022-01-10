@@ -15,8 +15,98 @@
   </head>
   <body>
     <div class="container">
-      <h1>hello world</h1>
-      <a href="" class="btn btn-primary">click me</a>
+      <div class="Weather">
+        <a href="https://www.shecodes.io/" target="_blank" rel="noopener noreferrer">
+          <img src="/images/logo.png" class="logo" alt="SheCodes Logo">
+        </a>
+        <form>
+          <div class="row">
+            <div class="col-9 ">
+              <input type="search" placeholder="Enter a city.." class="form-control search-input">
+            </div>
+            <div class="col-3 p-0">
+              <input type="submit" class="btn btn-primary w-100" value="Search">
+            </div>
+          </div>
+        </form>
+        <div class="WeatherInfo">
+          <div class="row">
+            <div class="col-6">
+              <h1>New York</h1>
+              <ul>
+                <li><span>Monday 21:26</span>, broken clouds</li>
+                <li>Humidity: <strong>45%</strong>, Wind: <strong>8.49km/h</strong></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <div class="temperature-container d-flex justify-content-end">
+                <canvas width="52" height="52"></canvas>
+                <div>
+                  <span class="temperature">-2</span>
+                  <span class="unit">°C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="WeatherForecast row">
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Mon</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">4°</span>
+                <span class="forecast-temperature-min">-3°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Tue</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">-3°</span>
+                <span class="forecast-temperature-min">-9°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Wed</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">3°</span>
+                <span class="forecast-temperature-min">-6°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Thu</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">3°</span>
+                <span class="forecast-temperature-min">1°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Fri</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">2°</span>
+                <span class="forecast-temperature-min">-11°</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          This project was coded by <a href="https://github.com/Tem-Tech/vanilla-weather-app" target="_blank" rel="noopener noreferrer">Leanne Oyeyemi</a> and is <a href="https://github.com/Tem-Tech/weather-project" target="_blank" rel="noopener noreferrer">open-sourced on GitHub</a> and <a href="https://distracted-feynman-bef91b.netlify.app/ target="_blank" rel="noopener noreferrer">hosted on Netlify
+        </a>
+      </footer>
+      </div>
+    </div>
       <script src="src/index.js"></script>
     </div>
   </body>
