@@ -11,43 +11,77 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="Weather">
-        <a href="https://www.shecodes.io/" target="_blank" rel="noopener noreferrer">
-          <img src="/images/logo.png" class="logo" alt="SheCodes Logo">
-        </a>
         <form>
           <div class="row">
             <div class="col-9 ">
-              <input type="search" placeholder="Enter a city.." class="form-control search-input">
+              <input type="search" placeholder="Enter a city.." class="form-control search-input" id="search-input">
             </div>
             <div class="col-3 p-0">
-              <input type="submit" class="btn btn-primary w-100" value="Search">
+              <input type="submit" class="btn btn-primary" value="Search" id="city-search">
+              <span>
+                <button type="submit" class="btn btn-primary" id="location-current">My Location</button>
+              </span>
             </div>
           </div>
         </form>
         <div class="WeatherInfo">
           <div class="row">
-            <div class="col-6">
-              <h1>New York</h1>
-              <ul>
-                <li><span>Monday 21:26</span>, broken clouds</li>
-                <li>Humidity: <strong>45%</strong>, Wind: <strong>8.49km/h</strong></li>
-              </ul>
+            <div class="col-4">
+              <h1 id="current-city">New York</h1>
+              <h1 id="current-country"></h1>
             </div>
-            <div class="col-6">
+            <div class="col-4"></div>
+            <div class="col-4">
               <div class="temperature-container d-flex justify-content-end">
-                <canvas width="52" height="52"></canvas>
                 <div>
-                  <span class="temperature">-2</span>
-                  <span class="unit">°C</span>
+                  <h2 id="current-day">Monday 21:26</h2>
+                  <h3 id="current-date"></h3> 
+                  
                 </div>
               </div>
             </div>
           </div>
+  
+        <div class="row">
+          <div class="col-4">
+            
+          </div>
+          <div class="clearfix col-4" id="icon">
+            <img src="src/float-cloud.gif" alt="" id="icon">
+          </div>
+          <div class="col-4">
+            <h3 id="description">broken clouds</h3>
+          </div>
+          
+        </div>
+      </div>
+      <div class="row2" >
+        
+        <h1>
+        <span class="temperature" id="temperature-high">-2</span>
+        <span class="unit">°</span>
+        <span class="temperature" id="temperature-low">-1</span>
+        <span class="unit">°</span>
+      </h1>
+                <div class="convert"><a href="#" id="celcius-link" class="active">°C</a>/<a href="#" id="farenheit-link">°F</a></div>
+        <ul>
+            <li></li>
+            <li>Humidity: <strong ><span id="humidity">45</span>%</strong></li>
+            <li >Wind: <strong><span id="windspeed">2</span>km/h</strong></li>
+            <li>Feels like: <strong><span id="feel">6</span>°</strong></li>
+          </ul>
         </div>
         <div class="WeatherForecast row">
           <div class="col">
@@ -105,6 +139,7 @@
           This project was coded by <a href="https://github.com/Tem-Tech/vanilla-weather-app" target="_blank" rel="noopener noreferrer">Leanne Oyeyemi</a> and is <a href="https://github.com/Tem-Tech/weather-project" target="_blank" rel="noopener noreferrer">open-sourced on GitHub</a> and <a href="https://distracted-feynman-bef91b.netlify.app/ target="_blank" rel="noopener noreferrer">hosted on Netlify
         </a>
       </footer>
+      </div>
       </div>
     </div>
       <script src="src/index.js"></script>
